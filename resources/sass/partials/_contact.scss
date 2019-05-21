@@ -1,0 +1,67 @@
+.sec-contact {
+    .b-checkbox {
+        text-align: justify;
+        margin-top: 5px;
+    }
+
+    @media screen and (max-width: $desktop) {
+
+        .title,
+        .subtitle {
+            text-align: center;
+        }
+
+        .divider {
+            margin: 30px auto;
+        }
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        .box.info {
+            padding-bottom: $boxMarginUp + 40;
+        }
+
+        .box.contact {
+            margin-top: -$boxMarginUp;
+            width: calc(100% - 80px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+
+        .container {
+            flex-flow: row;
+            margin-bottom: $boxMarginUp;
+        }
+
+        .box {
+
+            padding: 100px 120px 100px 80px;
+
+            &.info {
+                position: relative;
+                width: calc(33.333% + 40px);
+                height: 500px;
+                margin-top: - ($boxMarginUp+70px);
+                margin-bottom: 0;
+            }
+
+
+            &.contact {
+                position: relative;
+                top: 0;
+                width: 70%;
+                margin-left: - 40px;
+                margin-top: - $boxMarginUp;
+                float: right;
+
+                background-image: url("../images/shore_demo_sebastian_blank.png");
+                background-position: bottom right;
+                background-size: 65%;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

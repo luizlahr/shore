@@ -1,0 +1,66 @@
+footer {
+    display: flex;
+    background-color: $mainColor;
+    padding: 0;
+
+    .logo {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+
+        img {
+            width: 80px;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-flow: column;
+        padding: 20px 0;
+        width: 100%;
+
+        li a {
+            display: flex;
+            justify-content: center;
+            color: #222;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+
+        .container {
+            display: flex;
+            flex-flow: row;
+        }
+
+        ul {
+            li a {
+                justify-content: flex-start;
+            }
+        }
+
+        .logo {
+            justify-content: flex-end;
+            margin: 0;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+
+        ul {
+            flex-flow: row;
+
+            li {
+                padding: 0 20px
+            }
+        }
+
+        .logo {
+            justify-content: flex-end;
+            margin: 0;
+        }
+    }
+}

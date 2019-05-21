@@ -1,0 +1,105 @@
+.sec-members {
+    background-color: $membersBg;
+    background-image: url("../images/map_mobile.jpg");
+    background-position: bottom center;
+    background-size: 120%;
+    background-repeat: no-repeat;
+
+    .box.info {
+        .columns {
+            flex-wrap: wrap;
+            flex-flow: column;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-top: -$boxMarginUp;
+
+            .columns {
+                flex-flow: row;
+            }
+
+            .icon-list {
+                display: flex;
+                flex-direction: column;
+                flex-flow: row;
+                flex-wrap: wrap;
+
+                .icon-item {
+                    display: flex;
+                    width: 50%;
+                    background-size: 70px;
+                    padding-right: 20px;
+                }
+            }
+        }
+
+        @media screen and (max-width: $desktop) {
+            .title,
+            .subtitle {
+                text-align: center;
+            }
+
+            .divider {
+                margin: 30px auto;
+            }
+        }
+
+        @media screen and (max-width: $tablet) {
+            .icon-list {
+                .icon-item {
+                    padding-left: 0;
+                    padding-top: 70px;
+                    text-align: justify;
+                    background-position: top center;
+                    background-size: 70px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    form {
+        width: 80%;
+        margin: 0 auto;
+
+        .input-group .input {
+            text-align: center;
+        }
+
+        .button {
+            font-family: "Avenir Next Bold", sans-serif;
+            font-weight: bold;
+        }
+    }
+
+    .box.contact {
+        border-bottom: 5px solid darken($mainColor, 50);
+        margin: 100px 0;
+
+        .title {
+            text-align: center;
+            font-family: "Zahrah Regular", sans-serif !important;
+
+            @media screen and (min-width: $desktop) {
+                font-size: 1.5rem;
+                font-weight: 500 !important;
+            }
+        }
+
+        @media screen and (max-width: $desktop) {
+            margin: 50px 0 0;
+        }
+
+    }
+
+    @media screen and (min-width: $tablet) {
+        background-image: url("../images/map.jpg");
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-bottom: $boxMarginUp + 100px;
+        .box{
+            padding: 50px 80px !important;
+        }
+    }
+}

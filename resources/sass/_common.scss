@@ -1,0 +1,327 @@
+// GENERAL
+* {
+    font-family: "Avenir Next Regular", sans-serif !important;
+    box-sizing: border-box;
+}
+
+.bg-main-color {
+    background-color: $mainColor !important;
+}
+
+// SECTION
+.section {
+    position: relative;
+}
+
+@media screen and (min-width: $desktop) {
+    .section {
+        position: relative;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .container {
+        display: flex;
+        flex-flow: column;
+    }
+}
+
+// BOX
+.box {
+    position: relative;
+    border-radius: 0;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.1);
+    padding: 40px 50px;
+
+    @media screen and (min-width: $desktop) {
+        padding: 70px 80px !important;
+    }
+}
+
+// CHECK BOX
+.b-checkbox input[type="checkbox"]:checked+label::after,
+.b-checkbox input[type="radio"]:checked+label::after {
+    content: "✔";
+}
+
+// LISTA COM ICONES
+.icon-list {
+    li.icon-item {
+        display: flex;
+        flex-flow: column;
+        padding-left: 100px;
+        background-position: left center;
+        background-size: 60px;
+        background-repeat: no-repeat;
+    }
+}
+
+// TITLE AND SUBTITLE
+.title,
+.subtitle {
+    margin-bottom: 0 !important;
+}
+
+.title {
+    font-size: 1.2rem;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+}
+
+// DIVIDER
+.divider {
+    display: flex;
+    width: $dividerW;
+    margin: 30px 0;
+    height: $dividerH;
+    background-color: darken($mainColor, 50);
+}
+
+@media screen and (max-width: $desktop) {
+
+    .title,
+    .subtitle {
+        text-align: center;
+    }
+
+    .divider {
+        margin: 30px auto;
+    }
+}
+
+// FORMS
+.input,
+.textareat {
+
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+        border-bottom-color: lighten(#000000, 50);
+    }
+
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #000;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-bottom: 14px;
+
+    &::placeholder {
+        color: #777;
+    }
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+
+    .input {
+        width: 100%;
+        z-index: 200;
+        margin-bottom: 0;
+    }
+
+    button.button {
+        display: flex;
+        margin-top: 10px;
+        width: 100%;
+        padding: 5px;
+        font-size: 14px;
+        z-index: 201;
+    }
+
+    @media screen and (min-width: $tablet) {
+        button.button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 5px;
+            padding-left: 0;
+            padding-right: 0;
+            background-color: transparent;
+            border: 0;
+            width: max-content;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .input {
+            padding-right: 145px !important;
+            text-align: left !important;
+        }
+    }
+}
+
+.button {
+    display: flex;
+    max-width: 100%;
+    font-size: 0.8rem;
+    font-weight: bold;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    height: auto !important;
+    border-radius: 0;
+}
+
+.modal {
+    z-index: 5500;
+
+
+    .modal-content {
+        max-width: 280px;
+
+        @media screen and (min-width: $tablet) {
+            width: 700px;
+            max-width: 90%;
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: 1000px;
+        }
+
+        .box {
+            display: flex;
+            flex-flow: column;
+            padding: 0 !important;
+            margin-bottom: 0 !important;
+
+            @media screen and (min-width: $tablet) {
+                flex-flow: row;
+            }
+        }
+
+        .image {
+            display: flex;
+            width: 100%;
+            min-width: 100%;
+            max-width: 280px;
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+                height: 280px;
+            }
+
+            @media screen and (min-width: $tablet) {
+                min-width: 300px;
+                max-width: 300px;
+            }
+        }
+
+        .box-inner {
+            padding: 20px;
+
+            @media screen and (max-width: $tablet) {
+                padding: 20px !important;
+            }
+
+            @media screen and (min-width: $desktop) {
+                padding: 60px;
+            }
+
+            .subtitle {
+                margin: 0 !important;
+            }
+
+            p {
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            .button {
+                margin: 0 auto;
+            }
+
+            a {
+                display: block;
+                margin-top: 20px;
+                text-align: center;
+                text-decoration: underline;
+                color: #000;
+
+                @media screen and (min-width: $tablet) {
+                    text-align: left;
+                }
+
+                &:hover {
+                    color: lighten(#000, 50)
+                }
+            }
+
+            @media screen and (min-width: $tablet) {
+
+                .title,
+                .subtitle,
+                p {
+                    text-align: left;
+                }
+
+                .button {
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+
+    &#modalSuccess {
+
+        .title {
+            font-style: italic;
+        }
+
+        .image {
+            background-image: url("../images/loyalty_card_scanner_image_b.jpg");
+        }
+    }
+
+    &#modalError .image {
+        background-image: url("../images/loyalty_card_scanner_image_a.jpg");
+    }
+}
+
+.modal-close {
+    @media screen and (min-width: $desktop) {
+        position: absolute;
+
+        &::before,
+        &::after {
+            background-color: rgba(10, 10, 10, 0.3) !important;
+        }
+
+
+        &:hover {
+
+            &::before,
+            &::after {
+                background-color: rgba(10, 10, 10, 0.6);
+            }
+        }
+    }
+}
+
+.notification {
+    top: 40px;
+    right: 20px;
+    position: fixed;
+    display: none;
+    z-index: 5000;
+}

@@ -1,0 +1,48 @@
+header {
+    max-height: $headerH;
+
+    .container {
+        flex-flow: column;
+
+        .logo {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            height: $headerH;
+
+            img {
+                width: 120px;
+            }
+            span {
+                font-size: .85rem;
+                font-family: "Avenir Next Regular", sans-serif;
+                text-transform: uppercase;
+            }
+        }
+
+        .phone-number {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            width: 100%;
+            line-height: 40px;
+            font-family: "Avenir Next Bold", sans-serif;
+            font-weight: bolder;
+            font-size: 0.8rem;
+            background-color: $mainColor;
+        }
+
+        @media screen and (min-width: $tablet) {
+            .logo {
+                align-items: flex-start;
+            }
+
+            .phone-number {
+                align-items: flex-end;
+                line-height: $headerH;
+                background-color: transparent;
+            }
+        }
+    }
+}

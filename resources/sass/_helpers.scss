@@ -1,0 +1,168 @@
+// MARGINS
+@for $i from 1 through 10 {
+    .mt-#{$i*5} {
+        margin-top: 5px * $i !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .mt-m-#{$i*5} {
+        margin-top: (5px * $i) * (-1) !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .mr-#{$i*5} {
+        margin-right: 5px * $i !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .mb-#{$i*5} {
+        margin-bottom: 5px * $i !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .ml-#{$i*5} {
+        margin-left: 5px * $i !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .mv-#{$i*5} {
+        margin-top: 5px * $i !important;
+        margin-bottom: 5px * $i !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .mh-#{$i*5} {
+        margin-left: 5px * $i !important;
+        margin-right: 5px * $i !important;
+    }
+}
+
+
+// PADDINGS
+@for $i from 1 through 10 {
+    .pt-#{$i*5} {
+        padding-top: 5px * $i !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .pr-#{$i*5} {
+        padding-right: 5px * $i !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .pb-#{$i*5} {
+        padding-bottom: 5px * $i !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .pl-#{$i*5} {
+        padding-left: 5px * $i !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .pv-#{$i*5} {
+        padding-top: 5px * $i !important;
+        padding-bottom: 5px * $i !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .ph-#{$i*5} {
+        padding-left: 5px * $i !important;
+        padding-right: 5px * $i !important;
+    }
+}
+
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
+.pt-0 {
+    padding-top: 0 !important;
+}
+
+.pl-0 {
+    padding-left: 0 !important;
+}
+
+.pr-0 {
+    padding-right: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.ml-0 {
+    margin-left: 0 !important;
+}
+
+.mr-0 {
+    margin-right: 0 !important;
+}
+
+.ph-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.pv-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.mh-0 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.mv-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+@for $i from 1 through 10 {
+    .w-#{$i*10} {
+        width: 10% * $i !important;
+        max-width: 10% * $i !important;
+    }
+}
+
+.grow {
+    flex-grow: 1 !important;
+}
+
+.flex-justify-end {
+    justify-self: flex-end !important;
+}
+
+.flex-align-end {
+    justify-content: flex-end !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.content-center {
+    align-self: center;
+}
